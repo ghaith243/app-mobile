@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_extra_bold"
-                android:text="The STRAT Hotel, Casino &amp; SkyPod"
+                android:text="Hotel el Mouradi Yassmine hamamet"
                 android:textColor="@color/colorPrimary"
                 android:textSize="24sp" />
 
