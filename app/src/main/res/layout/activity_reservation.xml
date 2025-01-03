@@ -1,32 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="#F5F5F5"
+    android:gravity="center">
 
-    <EditText
-        android:id="@+id/roomNumberEditText"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Room Number" />
+        android:text="Reserve Your Room"
+        android:textSize="24sp"
+        android:textColor="#333"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium"/>
+
 
     <EditText
         android:id="@+id/guestNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Guest Name" />
+        android:hint="Guest Name"
+        android:textColor="#333"
+        android:backgroundTint="#00796B"
+        android:minHeight="56dp"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:drawablePadding="12dp"
+        android:inputType="text"/>
 
+    <!-- Check-in Date -->
     <EditText
-        android:id="@+id/dateEditText"
+        android:id="@+id/checkInDateEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Reservation Date"
+        android:hint="Check-in Date"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginBottom="16dp"
         android:inputType="date" />
+
+    <!-- Check-out Date -->
+    <EditText
+        android:id="@+id/checkOutDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Check-out Date"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginBottom="15dp"
+        android:inputType="date"/>
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reserve" />
+        android:text="Reserve"
+        android:textColor="#fff"
+        android:backgroundTint="#00796B"
+        android:minHeight="56dp"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
 </LinearLayout>

@@ -30,25 +30,38 @@ public class LoginActivity extends AppCompatActivity {
                 String username = usernameInput.getText().toString();
                 String password = passwordInput.getText().toString();
 
-                if (dbHelper.loginUser(username, password)) {
-                    Toast.makeText(LoginActivity.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                // Check if username and password are valid
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Please enter both username and password", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Identifiants incorrects", Toast.LENGTH_SHORT).show();
+                    // Check if the user is an admin by matching predefined credentials
+                    if (username.equals("admin") && password.equals("adminpassword")) {
+                        // Admin login
+                        Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                        startActivity(intent);
+                    } else {
+                        // Regular user login, check against the database
+                        boolean isLoggedIn = dbHelper.loginUser(username, password);
+                        if (isLoggedIn) {
+                            // Regular user login successful
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        } else {
+                            // Invalid credentials
+                            Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                        }
+                    }
                 }
             }
         });
 
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Redirection vers InscriptionUserActivity
                 Intent intent = new Intent(LoginActivity.this, InscriptionUserActivity.class);
                 startActivity(intent);
             }
         });
-
     }
 }

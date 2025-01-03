@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         cardView = findViewById(R.id.cardView);
         cardView2 = findViewById(R.id.cardView2);
         cardView3 = findViewById(R.id.cardView3);
-        imageView = findViewById(R.id.imageView);
         textView = findViewById(R.id.firstText);
         textView2 = findViewById(R.id.textView);
         textView3 = findViewById(R.id.textView2);
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         cardView.setAnimation(anim_from_button);
         cardView2.setAnimation(anim_from_button);
         cardView3.setAnimation(anim_from_button);
-        imageView.setAnimation(anim_from_top);
         textView.setAnimation(anim_from_top);
         textView2.setAnimation(anim_from_top);
         textView3.setAnimation(anim_from_top);

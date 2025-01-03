@@ -1,5 +1,6 @@
 package hotel.review.appandroid;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,8 +39,16 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
         holder.roomName.setText(room.getName());
         holder.roomPrice.setText("Prix: " + room.getPrice() + "€");
 
-        holder.bookButton.setOnClickListener(v ->
-                Toast.makeText(context, "Réservé : " + room.getName(), Toast.LENGTH_SHORT).show());
+        holder.bookButton.setOnClickListener(v -> {
+            // Intent to start ReservationActivity
+            Intent intent = new Intent(context, ReservationActivity.class);
+
+            // Optional: Pass any data if needed, like the room name
+            intent.putExtra("ROOM_NAME", room.getName());
+
+            // Start the ReservationActivity
+            context.startActivity(intent);
+        });
     }
 
     @Override

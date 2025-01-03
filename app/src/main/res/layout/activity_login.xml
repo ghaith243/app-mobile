@@ -4,16 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="#F5F5F5"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="24sp"
+        android:textColor="#333"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium"/>
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nom d'utilisateur"
-        android:minHeight="48dp"
+        android:textColor="#333"
+        android:backgroundTint="#00796B"
+        android:minHeight="56dp"
         android:padding="12dp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:drawablePadding="12dp"/>
 
     <EditText
         android:id="@+id/password"
@@ -21,24 +37,36 @@
         android:layout_height="wrap_content"
         android:hint="Mot de passe"
         android:inputType="textPassword"
-        android:minHeight="48dp"
+        android:textColor="#333"
+        android:backgroundTint="#00796B"
+        android:minHeight="56dp"
         android:padding="12dp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"
+        android:drawablePadding="12dp"/>
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Se connecter"
-        android:minHeight="48dp"
+        android:textColor="#fff"
+        android:backgroundTint="#00796B"
+        android:minHeight="56dp"
         android:padding="12dp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="S'inscrire"
-        android:minHeight="48dp"
-        android:padding="12dp" />
+        android:textColor="#00796B"
+        android:backgroundTint="#fff"
+        android:minHeight="56dp"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_gravity="center"/>
 </LinearLayout>

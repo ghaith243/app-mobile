@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title: Reservations -->
+    <TextView
+        android:id="@+id/reservationsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reservations"
+        android:textSize="24sp"
+        android:textColor="#333"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- Reservation Details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:weightSum="3">
+
+        <!-- Guest Name -->
+        <TextView
+            android:id="@+id/guestNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Guest Name"
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Check-in Date -->
+        <TextView
+            android:id="@+id/checkInDateText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Check-in Date"
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Check-out Date -->
+        <TextView
+            android:id="@+id/checkOutDateText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="Check-out Date"
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+
+
+        <!-- Delete Icon -->
+        <ImageButton
+            android:id="@+id/deleteIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:src="@android:drawable/ic_delete"
+            android:contentDescription="Delete Reservation"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="end"
+            android:importantForAccessibility="yes"
+            android:accessibilityLiveRegion="assertive"/>
+    </LinearLayout>
+</LinearLayout>
